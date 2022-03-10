@@ -1,0 +1,29 @@
+* /home/user/eSim-Workspace/6Tsram/6Tsram.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: thur Mar 10 16:56:06 2022
+
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+* Sheet Name: /
+xM1  Q Q1 Net-_M1-Pad3_ Net-_M1-Pad3_ sky130_fd_pr__pfet_01v8 w=0.84 l=0.21 
+		
+xM2  Q Q1 GND GND sky130_fd_pr__nfet_01v8 w=0.42 l=0.21		
+xM3  Q1 Q Net-_M1-Pad3_ Net-_M1-Pad3_ sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+		
+xM4  Q1 Q GND GND sky130_fd_pr__nfet_01v8 w=0.42 l=0.21	
+xM7  Net-_M1-Pad3_ Q vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.21
+	
+xM5  Q WL BL GND sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+xM6  RBL Q1 GND GND sky130_fd_pr__nfet_01v8 w=0.42 l=0.21
+
+V1 vdd gnd dc 1.8V
+
+VWL WL gnd pulse 0 1.8 0 60ps 60ps 20ns 40ns
+VQ Q gnd pulse 1.8 0 0 60ps 60ps 5ns 10ns
+.tran 0.1n 100n 
+.control
+run
+plot V(WL)+8 V(BL)+2 V(RBL) V(Q)+4 V(Q1)+6
+.endc
+.end
+
