@@ -308,6 +308,10 @@ Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
 # Acknowledgments
 Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
 
+Fossee IIT Bombay 
+
+Sumantho Kar IIT Bombay Senior Project Co-ordinator
+
 
 
 
